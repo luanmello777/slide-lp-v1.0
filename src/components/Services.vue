@@ -336,22 +336,22 @@
                         <v-container class="mt-lg-10">
                             <v-row>
                                 <v-col cols="12" sm="12" md="12" class="rounded-xl">
-                                    <v-text-field v-model="name" label="Nome" color="secondary"
+                                    <v-text-field name="name" label="Nome" color="secondary"
                                         hint="Informe seu Nome"></v-text-field>
                                 </v-col>
 
                                 <v-col cols="12" sm="12" md="12">
-                                    <v-text-field v-model="email" label="E-mail" placeholder="email@email.com.br"
+                                    <v-text-field name="email" label="E-mail" placeholder="email@email.com.br"
                                         hint="Informe seu E-mail" color="secondary"></v-text-field>
                                 </v-col>
 
                                 <v-col cols="12" sm="12" md="12">
-                                    <v-text-field v-model="whatsapp" label="WhatsApp" color="secondary"
+                                    <v-text-field name="whatsapp" label="WhatsApp" color="secondary"
                                         placeholder="ddd + número" hint="Informe seu WhatsApp"></v-text-field>
                                 </v-col>
 
                                 <v-col cols="12" sm="12" md="12">
-                                    <v-text-field v-model="message" label="Mensagem" color="secondary"
+                                    <v-text-field name="message" label="Mensagem" color="secondary"
                                         hint="Informe sua Mensagem"></v-text-field>
                                 </v-col>
                             </v-row>
