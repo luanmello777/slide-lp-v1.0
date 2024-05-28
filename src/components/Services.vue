@@ -332,46 +332,42 @@
                             DIGITAL</span> PARA O SEU
                         NEGÓCIO OU EMPREENDIMENTO</h5>
 
-                    <v-form ref="form" v-model="valid" @submit.prevent="submitForm">
+                    <v-form ref="form">
                         <v-container class="mt-lg-10">
                             <v-row>
                                 <v-col cols="12" sm="12" md="12" class="rounded-xl">
-                                    <v-text-field v-model="name" :rules="[rules.required]" required label="Nome"
+                                    <v-text-field v-model="name"  label="Nome"
                                         color="secondary" hint="Informe seu Nome"></v-text-field>
                                 </v-col>
 
                                 <v-col cols="12" sm="12" md="12">
-                                    <v-text-field v-model="email" :rules="[rules.required, rules.email]" required
+                                    <v-text-field v-model="email" 
                                         label="E-mail" placeholder="email@email.com.br" hint="Informe seu E-mail"
                                         color="secondary"></v-text-field>
                                 </v-col>
 
                                 <v-col cols="12" sm="12" md="12">
                                     <v-text-field v-model="whatsapp" label="WhatsApp" color="secondary"
-                                        placeholder="ddd + número" :rules="[rules.required, rules.whatsapp]" required
+                                        placeholder="ddd + número" 
                                         hint="Informe seu WhatsApp"></v-text-field>
                                 </v-col>
 
                                 <v-col cols="12" sm="12" md="12">
-                                    <v-text-field v-model="message" :rules="[rules.required]" required label="Mensagem"
+                                    <v-text-field v-model="message"  label="Mensagem"
                                         color="secondary" hint="Informe sua Mensagem"></v-text-field>
                                 </v-col>
-                            </v-row> 
-                            
-                            <div align="center">
-                            <v-btn type="submit"
-                                class="bg-secondary w-75 w-lg-50 mt-md-8 rounded-pill animate__animated animate__pulse animate__infinite"
-                                size="large">
-                                <h3 class="text-primary">ENVIAR</h3>
-                            </v-btn>
-                        </div>
+                            </v-row>
 
-                        <v-snackbar v-model="snackbar" :color="snackbarColor">
-                            {{ snackbarText }}
-                          </v-snackbar>
+                            <div align="center">
+                                <v-btn type="submit"
+                                    class="bg-secondary w-75 w-lg-50 mt-md-8 rounded-pill animate__animated animate__pulse animate__infinite"
+                                    size="large">
+                                    <h3 class="text-primary">ENVIAR</h3>
+                                </v-btn>
+                            </div>
                         </v-container>
-                         </v-form>
-                  
+                    </v-form>
+
                 </div>
             </v-col>
 
@@ -427,8 +423,6 @@
 
 <script setup>
 import { useDisplay } from 'vuetify';
-
-
 
 const { smAndDown } = useDisplay()
 </script>
