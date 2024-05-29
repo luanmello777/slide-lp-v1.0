@@ -423,8 +423,6 @@ import { useDisplay } from 'vuetify';
 import { ref } from 'vue';
 import axios from 'axios';
 
-const { smAndDown } = useDisplay()
-
 const form = ref({
   name: '',
   email: '',
@@ -434,12 +432,11 @@ const form = ref({
 
 const submitForm = async () => {
   try {
-    const response = await axios.post('https://slidelp.netlify.app/sendEmail', form.value);
+    const response = await axios.post('/.netlify/functions/sendEmail', form.value);
     alert(response.data.message);
   } catch (error) {
     alert('Erro ao enviar mensagem.');
     console.error(error);
   }
 };
-
 </script>
