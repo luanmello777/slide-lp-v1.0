@@ -438,7 +438,7 @@ const submitForm = () => {
         message: message.value
     };
 
-    axios.post('/components/send.php', formData)
+    axios.post('https://slidelp.netlify.app/components/send.php', formData)
         .then(response => {
             console.log(response.data);
             // Exemplo de mensagem de sucesso
