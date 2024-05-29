@@ -438,7 +438,7 @@ const submitForm = () => {
         message: message.value
     };
 
-    axios.post('/send.php', formData)
+    axios.post('./components/send.php', formData)
         .then(response => {
             console.log(response.data);
             // Exemplo de mensagem de sucesso
