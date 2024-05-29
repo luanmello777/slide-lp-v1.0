@@ -1,6 +1,6 @@
 [build]
-  functions = "netlify/functions"
-  publish = "dist"
+  command = "npm run build"  # Comando para build do seu projeto
+  publish = "dist"           # Pasta onde está o conteúdo estático do seu site
 
 [functions]
-  node_bundler = "esbuild"
+  directory = "netlify/functions"  # Diretório onde suas funções Netlify estão localizadas

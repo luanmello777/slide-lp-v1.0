@@ -434,7 +434,7 @@ const form = ref({
 
 const submitForm = async () => {
   try {
-    const response = await axios.post('./netlify/functions/sendEmail.js', form.value);
+    const response = await axios.post('/.netlify/functions/sendEmail', form.value);
     alert(response.data.message);
   } catch (error) {
     alert('Erro ao enviar mensagem.');
