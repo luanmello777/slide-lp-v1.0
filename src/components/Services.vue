@@ -332,26 +332,26 @@
                             DIGITAL</span> PARA O SEU
                         NEGÓCIO OU EMPREENDIMENTO</h5>
 
-                    <v-form action="/send.php" @submit.prevent="submitForm">
+                    <v-form @submit.prevent="submitForm">
                         <v-container class="mt-lg-10">
                             <v-row>
                                 <v-col cols="12" sm="12" md="12" class="rounded-xl">
-                                    <v-text-field name="name" label="Nome" color="secondary"
+                                    <v-text-field v-model="form.name" label="Nome" color="secondary"
                                         hint="Informe seu Nome"></v-text-field>
                                 </v-col>
 
                                 <v-col cols="12" sm="12" md="12">
-                                    <v-text-field name="email" label="E-mail" placeholder="email@email.com.br"
+                                    <v-text-field v-model="form.email" label="E-mail" placeholder="email@email.com.br"
                                         hint="Informe seu E-mail" color="secondary"></v-text-field>
                                 </v-col>
 
                                 <v-col cols="12" sm="12" md="12">
-                                    <v-text-field name="whatsapp" label="WhatsApp" color="secondary"
+                                    <v-text-field v-model="form.whatsapp" label="WhatsApp" color="secondary"
                                         placeholder="ddd + número" hint="Informe seu WhatsApp"></v-text-field>
                                 </v-col>
 
                                 <v-col cols="12" sm="12" md="12">
-                                    <v-text-field name="message" label="Mensagem" color="secondary"
+                                    <v-text-field v-model="form.message" label="Mensagem" color="secondary"
                                         hint="Informe sua Mensagem"></v-text-field>
                                 </v-col>
                             </v-row>
@@ -425,38 +425,21 @@ import axios from 'axios';
 
 const { smAndDown } = useDisplay()
 
-const name = ref('');
-const email = ref('');
-const whatsapp = ref('');
-const message = ref('');
+const form = ref({
+  name: '',
+  email: '',
+  whatsapp: '',
+  message: ''
+});
 
-const submitForm = () => {
-    const formData = {
-        name: name.value,
-        email: email.value,
-        whatsapp: whatsapp.value,
-        message: message.value
-    };
-
-    axios.post('./components/send.php', formData)
-        .then(response => {
-            console.log(response.data);
-            // Exemplo de mensagem de sucesso
-            showMessage('success', 'Mensagem enviada com sucesso!');
-            // Ou você pode redirecionar o usuário para outra página após o envio bem-sucedido
-            // window.location.href = '/sucesso.html';
-        })
-        .catch(error => {
-            console.error(error);
-            // Exemplo de mensagem de erro
-            showMessage('error', 'Ocorreu um erro ao enviar a mensagem. Por favor, tente novamente mais tarde.');
-        });
+const submitForm = async () => {
+  try {
+    const response = await axios.post('https://slidelp.netlify.app/sendEmail', form.value);
+    alert(response.data.message);
+  } catch (error) {
+    alert('Erro ao enviar mensagem.');
+    console.error(error);
+  }
 };
 
-const showMessage = (type, text) => {
-    // Lógica para exibir a mensagem ao usuário
-    // Por exemplo, você pode usar uma biblioteca de notificação como Toastify, SweetAlert, etc.
-    // Aqui está um exemplo simples usando console.log para depurar:
-    console.log(`[${type.toUpperCase()}]: ${text}`);
-}
 </script>
