@@ -3,10 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "preview": "vite preview",
-    "build": "vue-cli-service build",
-    "serve": "vue-cli-service serve",
-    "lint": "vue-cli-service lint"
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
     "@mdi/font": "7.0.96",
