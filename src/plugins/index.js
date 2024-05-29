@@ -12,3 +12,6 @@ export function registerPlugins (app) {
   loadFonts()
   app.use(vuetify)
 }
+module.exports = {
+  mode: 'production'
+}
