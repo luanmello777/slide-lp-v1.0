@@ -1,6 +1,6 @@
 [build]
-  command = "npm run build"  # Comando para build do seu projeto
-  publish = "dist"           # Pasta onde está o conteúdo estático do seu site
+  command = "npm run build"
+  publish = "dist"
 
 [functions]
-  directory = "netlify/functions"  # Diretório onde suas funções Netlify estão localizadas
+  directory = "netlify/functions"
