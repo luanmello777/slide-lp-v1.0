@@ -332,7 +332,7 @@
                             DIGITAL</span> PARA O SEU
                         NEGÓCIO OU EMPREENDIMENTO</h5>
 
-                    <v-form method="POST" action="https://formsubmit.co/slidetechnologys@gmail.com" @submit.prevent="submitForm">
+                    <v-form method="POST" action="https://formsubmit.co/slidetechnologys@gmail.com">
                         <v-container class="mt-lg-10">
                             <v-row>
                                 <v-col cols="12" sm="12" md="12" class="rounded-xl">
