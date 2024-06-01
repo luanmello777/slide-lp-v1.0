@@ -332,29 +332,27 @@
                             DIGITAL</span> PARA O SEU
                         NEGÓCIO OU EMPREENDIMENTO</h5>
 
-                    <v-form action="https://formsubmit.co/ffe7bed11114c74d18dbe208662425a8" method="POST">
+                    <v-form method="POST" action="https://formsubmit.co/slidetechnologys@gmail.com">
                         <v-container class="mt-lg-10">
                             <v-row>
                                 <v-col cols="12" sm="12" md="12" class="rounded-xl">
-                                    <v-text-field v-model="formData.nome" name="nome" label="Nome" color="secondary"
+                                    <v-text-field name="nome" label="Nome" color="secondary"
                                         hint="Informe seu Nome"></v-text-field>
                                 </v-col>
 
                                 <v-col cols="12" sm="12" md="12">
-                                    <v-text-field v-model="formData.email" name="email" label="E-mail"
-                                        placeholder="email@email.com.br" hint="Informe seu E-mail"
-                                        color="secondary"></v-text-field>
+                                    <v-text-field name="email" label="E-mail" placeholder="email@email.com.br"
+                                        hint="Informe seu E-mail" color="secondary"></v-text-field>
                                 </v-col>
 
                                 <v-col cols="12" sm="12" md="12">
-                                    <v-text-field v-model="formData.whatsapp" name="whatsapp" label="WhatsApp"
-                                        color="secondary" placeholder="ddd + número"
-                                        hint="Informe seu WhatsApp"></v-text-field>
+                                    <v-text-field name="whatsapp" label="WhatsApp" color="secondary"
+                                        placeholder="ddd + número" hint="Informe seu WhatsApp"></v-text-field>
                                 </v-col>
 
                                 <v-col cols="12" sm="12" md="12">
-                                    <v-text-field v-model="formData.message" name="message" label="Mensagem"
-                                        color="secondary" hint="Informe sua Mensagem"></v-text-field>
+                                    <v-text-field name="message" label="Mensagem" color="secondary"
+                                        hint="Informe sua Mensagem"></v-text-field>
                                 </v-col>
                             </v-row>
 
@@ -366,7 +364,6 @@
                                 </v-btn>
                             </div>
                         </v-container>
-
                         <v-snackbar v-model="snackbar" :timeout="3000" color="success">
                             Formulário enviado com sucesso!
                         </v-snackbar>
@@ -426,7 +423,6 @@
 
 <script setup>
 import { useDisplay } from 'vuetify';
-
 
 
 const { smAndDown } = useDisplay()
