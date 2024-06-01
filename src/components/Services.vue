@@ -336,7 +336,7 @@
                         <v-container class="mt-lg-10">
                             <v-row>
                                 <v-col cols="12" sm="12" md="12" class="rounded-xl">
-                                    <v-text-field name="nome" label="Nome" color="secondary" value="https://slidelp.netlify.app/"
+                                    <v-text-field name="nome" label="Nome" color="secondary"
                                         hint="Informe seu Nome"></v-text-field>
                                 </v-col>
 
