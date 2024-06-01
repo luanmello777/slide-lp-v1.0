@@ -357,6 +357,7 @@
                             </v-row>
 
                             <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_next" value="/Thanks.vue">
 
                             <div align="center">
                                 <v-btn type="submit"
@@ -366,10 +367,6 @@
                                 </v-btn>
                             </div>
                         </v-container>
-                        <v-snackbar type="hidden" name="_next" v-model="snackbar" :timeout="3000" color="success"
-                            value="Formulário enviado com sucesso!">
-
-                        </v-snackbar>
                     </v-form>
                 </div>
             </v-col>

@@ -16,4 +16,5 @@ import Home from '@/components/Home.vue'
 import Solutions from '@/components/Solutions.vue'
 import Services from '@/components/Services.vue'
 import Footer from '@/components/Footer.vue'
+import Thanks from '@/components/Thanks.vue'
 </script>
