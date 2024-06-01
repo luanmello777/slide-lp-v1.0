@@ -332,7 +332,7 @@
                             DIGITAL</span> PARA O SEU
                         NEGÓCIO OU EMPREENDIMENTO</h5>
 
-                    <v-form @submit.prevent="submitForm" ref="formRef">
+                    <v-form action="https://formsubmit.co/ffe7bed11114c74d18dbe208662425a8" method="POST">
                         <v-container class="mt-lg-10">
                             <v-row>
                                 <v-col cols="12" sm="12" md="12" class="rounded-xl">
@@ -426,50 +426,8 @@
 
 <script setup>
 import { useDisplay } from 'vuetify';
-import { ref } from 'vue';
+
 
 
 const { smAndDown } = useDisplay()
-const formRef = ref(null);
-const snackbar = ref(false);
-
-const formData = ref({
-  nome: '',
-  email: '',
-  whatsapp: '',
-  message: ''
-});
-
-const submitForm = () => {
-  const form = formRef.value;
-  const formDataObj = new FormData();
-
-  for (const [key, value] of Object.entries(formData.value)) {
-    formDataObj.append(key, value);
-  }
-
-  fetch('https://formsubmit.co/ffe7bed11114c74d18dbe208662425a8', {
-    method: 'POST',
-    body: formDataObj,
-    headers: {
-      'Accept': 'application/json',
-    },
-  })
-    .then(response => {
-      if (response.ok) {
-        snackbar.value = true;
-        formData.value = {
-          nome: '',
-          email: '',
-          whatsapp: '',
-          message: ''
-        };
-      } else {
-        console.error('Erro ao enviar o formulário');
-      }
-    })
-    .catch(error => {
-      console.error('Erro ao enviar o formulário', error);
-    });
-};
 </script>
