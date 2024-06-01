@@ -332,7 +332,7 @@
                             DIGITAL</span> PARA O SEU
                         NEGÓCIO OU EMPREENDIMENTO</h5>
 
-                    <v-form method="POST" action="https://formsubmit.co/slidetechnologys@gmail.com">
+                    <v-form>
                         <v-container class="mt-lg-10">
                             <v-row>
                                 <v-col cols="12" sm="12" md="12" class="rounded-xl">
@@ -357,8 +357,8 @@
                             </v-row>
 
                             <input type="hidden" name="_captcha" value="false">
-                            <input type="hidden" name="_next" value="/Thanks.vue">
 
+                        
                             <div align="center">
                                 <v-btn type="submit"
                                     class="bg-secondary w-75 w-lg-50 mt-md-8 rounded-pill animate__animated animate__pulse animate__infinite"
