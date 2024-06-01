@@ -1,6 +1,6 @@
 <template>
 
-    <div class="backcolor bg-primary pt-16 pb-16" align="center" justify="center">
+    <div class="backcolor bg-primary pt-16 pb-16" align="center" justify="center" id="serviços">
 
         <div class="mt-5 mb-5 mt-sm-16 mb-sm-16 mt-lg-16 pt-lg-16">
             <h1 class="font text-secondary font-weight-bold text-sm-h2 text-md-h2 text-lg-h1">SERVIÇOS</h1>
@@ -320,7 +320,7 @@
         </v-row>
 
 
-        <v-row class="w-100 pt-16 mt-10 mt-lg-16" justify="center">
+        <v-row class="w-100 pt-16 mt-10 mt-lg-16" justify="center" id="contato">
 
             <v-col cols="12" sm="6">
                 <div align="left">

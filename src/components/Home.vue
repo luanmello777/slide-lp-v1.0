@@ -5,12 +5,7 @@
       <source :src="videoSource" type="video/mp4">
     </video>
 
-    <div class="w-100 mt-md-10" style="position: absolute; line-height: normal;" align="center">
-      <v-img src="../assets/logo.png" type="image/webp" class="d-lg-none"
-        :class="smAndDown ? 'w-25 mt-4 mb-2' : ''" />
-
-      <v-img src="../assets/logo.png" height="230px" type="image/webp" class="d-none d-lg-block" />
-
+    <div class="w-100 mt-md-10 mt-16 pt-sm-10" style="position: absolute; line-height: normal;" align="center">
 
       <h3 class="font text-white font-weight-bold text-sm-h4 mt-sm-10 mt-lg-16  text-md-h3 text-lg-h2">TE AJUDAMOS A
         <span class="text-secondary">VENDER
