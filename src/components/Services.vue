@@ -332,27 +332,29 @@
                             DIGITAL</span> PARA O SEU
                         NEGÓCIO OU EMPREENDIMENTO</h5>
 
-                    <v-form method="POST" action="https://formsubmit.co/ffe7bed11114c74d18dbe208662425a8">
+                    <v-form @submit.prevent="submitForm" ref="formRef">
                         <v-container class="mt-lg-10">
                             <v-row>
                                 <v-col cols="12" sm="12" md="12" class="rounded-xl">
-                                    <v-text-field name="nome" label="Nome" color="secondary"
+                                    <v-text-field v-model="formData.nome" name="nome" label="Nome" color="secondary"
                                         hint="Informe seu Nome"></v-text-field>
                                 </v-col>
 
                                 <v-col cols="12" sm="12" md="12">
-                                    <v-text-field name="email" label="E-mail" placeholder="email@email.com.br"
-                                        hint="Informe seu E-mail" color="secondary"></v-text-field>
+                                    <v-text-field v-model="formData.email" name="email" label="E-mail"
+                                        placeholder="email@email.com.br" hint="Informe seu E-mail"
+                                        color="secondary"></v-text-field>
                                 </v-col>
 
                                 <v-col cols="12" sm="12" md="12">
-                                    <v-text-field name="whatsapp" label="WhatsApp" color="secondary"
-                                        placeholder="ddd + número" hint="Informe seu WhatsApp"></v-text-field>
+                                    <v-text-field v-model="formData.whatsapp" name="whatsapp" label="WhatsApp"
+                                        color="secondary" placeholder="ddd + número"
+                                        hint="Informe seu WhatsApp"></v-text-field>
                                 </v-col>
 
                                 <v-col cols="12" sm="12" md="12">
-                                    <v-text-field name="message" label="Mensagem" color="secondary"
-                                        hint="Informe sua Mensagem"></v-text-field>
+                                    <v-text-field v-model="formData.message" name="message" label="Mensagem"
+                                        color="secondary" hint="Informe sua Mensagem"></v-text-field>
                                 </v-col>
                             </v-row>
 
@@ -364,6 +366,10 @@
                                 </v-btn>
                             </div>
                         </v-container>
+
+                        <v-snackbar v-model="snackbar" :timeout="3000" color="success">
+                            Formulário enviado com sucesso!
+                        </v-snackbar>
                     </v-form>
                 </div>
             </v-col>
@@ -420,7 +426,50 @@
 
 <script setup>
 import { useDisplay } from 'vuetify';
+import { ref } from 'vue';
 
 
 const { smAndDown } = useDisplay()
+const formRef = ref(null);
+const snackbar = ref(false);
+
+const formData = ref({
+  nome: '',
+  email: '',
+  whatsapp: '',
+  message: ''
+});
+
+const submitForm = () => {
+  const form = formRef.value;
+  const formDataObj = new FormData();
+
+  for (const [key, value] of Object.entries(formData.value)) {
+    formDataObj.append(key, value);
+  }
+
+  fetch('https://formsubmit.co/ffe7bed11114c74d18dbe208662425a8', {
+    method: 'POST',
+    body: formDataObj,
+    headers: {
+      'Accept': 'application/json',
+    },
+  })
+    .then(response => {
+      if (response.ok) {
+        snackbar.value = true;
+        formData.value = {
+          nome: '',
+          email: '',
+          whatsapp: '',
+          message: ''
+        };
+      } else {
+        console.error('Erro ao enviar o formulário');
+      }
+    })
+    .catch(error => {
+      console.error('Erro ao enviar o formulário', error);
+    });
+};
 </script>
