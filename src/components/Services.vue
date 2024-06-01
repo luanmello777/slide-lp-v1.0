@@ -332,7 +332,7 @@
                             DIGITAL</span> PARA O SEU
                         NEGÓCIO OU EMPREENDIMENTO</h5>
 
-                    <v-form method="POST" @submit.prevent="submitForm">
+                    <v-form method="POST" action="https://formsubmit.co/slidetechnologys@gmail.com" @submit.prevent="submitForm">
                         <v-container class="mt-lg-10">
                             <v-row>
                                 <v-col cols="12" sm="12" md="12" class="rounded-xl">
@@ -420,44 +420,7 @@
 
 <script setup>
 import { useDisplay } from 'vuetify';
-import { ref } from 'vue';
-import axios from 'axios';
+
 
 const { smAndDown } = useDisplay()
-
-const name = ref('');
-const email = ref('');
-const whatsapp = ref('');
-const message = ref('');
-
-const submitForm = () => {
-    const formData = {
-        name: name.value,
-        email: email.value,
-        whatsapp: whatsapp.value,
-        message: message.value
-    };
-
-    axios.post('https://formsubmit.co/ajax/slidetechnologys@gmail.com', formData)
-        .then(response => {
-            console.log(response.data);
-            // Exemplo de mensagem de sucesso
-            showMessage('success', 'Mensagem enviada com sucesso!');
-            // Ou você pode redirecionar o usuário para outra página após o envio bem-sucedido
-            // window.location.href = '/sucesso.html';
-        })
-        .catch(error => {
-            console.error(error);
-            // Exemplo de mensagem de erro
-            showMessage('error', 'Ocorreu um erro ao enviar a mensagem. Por favor, tente novamente mais tarde.');
-        });
-};
-
-const showMessage = (type, text) => {
-    // Lógica para exibir a mensagem ao usuário
-    // Por exemplo, você pode usar uma biblioteca de notificação como Toastify, SweetAlert, etc.
-    // Aqui está um exemplo simples usando console.log para depurar:
-    console.log(`[${type.toUpperCase()}]: ${text}`);
-}
-
 </script>
