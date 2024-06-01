@@ -355,6 +355,8 @@
                                         hint="Informe sua Mensagem"></v-text-field>
                                 </v-col>
                             </v-row>
+                            
+                            <input type="hidden" name="_captcha" value="false">
 
                             <div align="center">
                                 <v-btn type="submit"
