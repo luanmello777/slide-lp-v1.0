@@ -332,7 +332,7 @@
                             DIGITAL</span> PARA O SEU
                         NEGÓCIO OU EMPREENDIMENTO</h5>
 
-                    <v-form method="post" action="/send.php" @submit.prevent="submitForm">
+                    <v-form method="POST" @submit.prevent="submitForm">
                         <v-container class="mt-lg-10">
                             <v-row>
                                 <v-col cols="12" sm="12" md="12" class="rounded-xl">
@@ -438,7 +438,7 @@ const submitForm = () => {
         message: message.value
     };
 
-    axios.post('https://slidelp.netlify.app/components/send.php', formData)
+    axios.post('https://formsubmit.co/ajax/slidetechnologys@gmail.com', formData)
         .then(response => {
             console.log(response.data);
             // Exemplo de mensagem de sucesso
