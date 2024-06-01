@@ -355,7 +355,7 @@
                                         hint="Informe sua Mensagem"></v-text-field>
                                 </v-col>
                             </v-row>
-                            
+
                             <input type="hidden" name="_captcha" value="false">
 
                             <div align="center">
@@ -366,8 +366,9 @@
                                 </v-btn>
                             </div>
                         </v-container>
-                        <v-snackbar v-model="snackbar" :timeout="3000" color="success">
-                            Formulário enviado com sucesso!
+                        <v-snackbar type="hidden" name="_next" v-model="snackbar" :timeout="3000" color="success"
+                            value="Formulário enviado com sucesso!">
+
                         </v-snackbar>
                     </v-form>
                 </div>
