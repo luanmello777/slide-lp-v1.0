@@ -7,7 +7,7 @@
         </div>
 
         <v-row class="w-100 pt-16 mt-sm-16 ml-lg-10">
-            <v-col class="pt-lg-16" cols="6">
+            <v-col class="pt-lg-16" cols="6" id="inbound">
                 <div align="left" style="line-height: normal;">
                     <h5 class="font font-weight-bold text-secondary pt-5 pt-sm-9 pt-md-16 pt-lg-16 mt-lg-16 text-sm-h5 text-md-h4 text-lg-h4"
                         style="line-height: normal;">INBOUND
@@ -356,9 +356,6 @@
                                 </v-col>
                             </v-row>
 
-                            <input type="hidden" name="_captcha" value="false">
-
-                        
                             <div align="center">
                                 <v-btn type="submit"
                                     class="bg-secondary w-75 w-lg-50 mt-md-8 rounded-pill animate__animated animate__pulse animate__infinite"
@@ -417,6 +414,14 @@
     100% {
         background-position: 0% 50%;
     }
+}
+
+#contato {
+    scroll-margin-top: 30px;
+}
+
+#inbound {
+    scroll-margin-top: 80px;
 }
 </style>
 

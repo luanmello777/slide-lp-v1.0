@@ -1,12 +1,15 @@
 <template>
 
-    <v-app-bar class="bg-primary" height="80">
+    <v-app-bar class="bg-primary" height="90">
 
         <v-row class="w-100" align="center" justify="center">
 
-            <v-col class="pr-16" cols="6" sm="5">
-                <v-img src="../assets/logo.png" class="mr-sm-16" type="image/webp" height="60" />
+            <v-col class="pl-8 pl-sm-4 pl-md-0 pr-lg-16 mr-lg-16" cols="6" sm="6" lg="6">
+                <div class="pr-lg-16 mr-lg-16 w-50">
+                    <v-img src="../assets/logo.png" class="mr-sm-16" type="image/webp" height="70" />
+                </div>
             </v-col>
+
 
             <v-col cols="6" align="right" class="d-sm-none">
                 <v-menu>
@@ -24,19 +27,19 @@
                 </v-menu>
             </v-col>
 
-            <v-col cols="6" sm="7" align="right" class="d-none d-sm-block pl-sm-16">
-                <div class="d-flex d-none">
-                    <v-btn>
-                        <h6 class="font-weight-bold">Home</h6>
+            <v-col cols="6" sm="6" lg="5" class="d-none d-sm-block pr-sm-16 pr-md-8 pr-lg-0">
+                <div class="d-flex justify-space-evenly">
+                    <v-btn href="#home">
+                        <h6 class="font font-weight-bold">HOME</h6>
                     </v-btn>
-                    <v-btn>
-                        <h6 class="text-secondary font-weight-medium">Soluções</h6>
+                    <v-btn href="#soluçoes">
+                        <h6 class="font text-secondary font-weight-medium">SOLUÇÕES</h6>
                     </v-btn>
-                    <v-btn>
-                        <h6 class="text-secondary">Serviços</h6>
+                    <v-btn href="#serviços">
+                        <h6 class="font text-secondary">SERVIÇOS</h6>
                     </v-btn>
-                    <v-btn>
-                        <h6 class="text-secondary">Contato</h6>
+                    <v-btn class="bg-secondary rounded-lg" href="#contato">
+                        <h6 class="font text-primary">CONTATO</h6>
                     </v-btn>
                 </div>
             </v-col>
@@ -45,6 +48,13 @@
 
     </v-app-bar>
 </template>
+
+<style scoped>
+.font {
+    font-family: "Inter", sans-serif;
+}
+</style>
+
 
 <script setup>
 const itemsMobile = [

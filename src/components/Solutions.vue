@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-primary pt-2 pb-lg-16" align="center" justify="center">
+    <div class="bg-primary pt-2 pb-lg-16" align="center" justify="center" id="soluçoes">
         <v-img src="/setaup.png" type="image/webp" style="height: 20px;" />
 
         <div class="mt-12 mt-lg-16 pt-lg-16" style="line-height: normal;">
@@ -29,7 +29,7 @@
                 EMPREENDIMENTO</h6>
         </div>
 
-        <div align="center" justify="center" id="soluçoes">
+        <div align="center" justify="center">
             <v-row class="w-100 mt-16 pt-2 mt-sm-16 pt-sm-16" align="center" justify="center">
                 <v-col class="mt-5" cols="6" lg="3">
                     <div class="rounded-xl pb-5 elevation-24" style="border: 1px solid #72FFFF;">
