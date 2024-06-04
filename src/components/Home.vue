@@ -5,7 +5,7 @@
       <source :src="videoSource" type="video/mp4">
     </video>
 
-    <div class="w-100 mt-md-10 mt-16 pt-sm-10" style="position: absolute; line-height: normal;" align="center">
+    <div class="w-100 mt-md-10 pt-lg-16 mt-16 pt-sm-10" style="position: absolute; line-height: normal;" align="center">
 
       <h3 class="font text-white font-weight-bold text-sm-h4 mt-sm-10 mt-md-16 pt-md-16 text-md-h3 text-lg-h2">TE
         AJUDAMOS A
@@ -13,36 +13,38 @@
           MAIS</span>!
       </h3>
 
-      <h6 class="font text-white font-weight-light mt-1 d-sm-none" style="font-size: 38%;">SE <span
-          class="font-weight-bold">POSICIONE</span> NO
+      <h6 class="font text-white font-weight-light mt-1 d-sm-none" style="font-size: 38%;"><span
+          class="font-weight-bold">POSICIONE-SE</span> NO
         MERCADO E
-        SE <span class="font-weight-bold">DESTAQUE</span> ATRAVÉS DO <span
-          class="text-secondary font-weight-bold">MARKETING DIGITAL</span></h6>
+        <span class="font-weight-bold">DESTAQUE-SE</span> ATRAVÉS DO <span
+          class="text-secondary font-weight-bold">MARKETING DIGITAL</span>
+      </h6>
 
 
-      <h6 class="font text-white font-weight-light mt-1 d-none d-md-none d-sm-block" style="font-size: 10px">SE <span
-          class="font-weight-bold">POSICIONE</span> NO
+      <h6 class="font text-white font-weight-light mt-1 d-none d-md-none d-sm-block" style="font-size: 10px"><span
+          class="font-weight-bold">POSICIONE-SE</span> NO
         MERCADO E
-        SE <span class="font-weight-bold">DESTAQUE</span> ATRAVÉS DO <span
-          class="text-secondary font-weight-bold">MARKETING DIGITAL</span></h6>
+        <span class="font-weight-bold">DESTAQUE-SE</span> ATRAVÉS DO <span
+          class="text-secondary font-weight-bold">MARKETING DIGITAL</span>
+      </h6>
 
-      <h6 class="font text-white font-weight-light mt-1 mt-lg-3 d-none d-md-block text-lg-h6" style="font-size: 14px">SE
-        <span class="font-weight-bold">POSICIONE</span> NO
+      <h6 class="font text-white font-weight-light mt-1 mt-lg-3 d-none d-md-block text-lg-h6" style="font-size: 14px">
+        <span class="font-weight-bold">POSICIONE-SE</span> NO
         MERCADO E
-        SE <span class="font-weight-bold">DESTAQUE</span> ATRAVÉS DO <span
+        <span class="font-weight-bold">DESTAQUE-SE</span> ATRAVÉS DO <span
           class="text-secondary font-weight-bold">MARKETING DIGITAL</span>
       </h6>
 
 
 
-      <v-btn class="mt-16 rounded-pill w-25 bg-secondary d-lg-block d-none" height="80px" size="x-large"
+      <v-btn class="mt-16 rounded-pill w-25 bg-secondary d-lg-block d-none elevation-24" height="80px" size="x-large"
         href="#inbound">
         <h6 class="text-primary font-weight-bold d-none d-md-block" style="font-size: 110%; line-height: 80px;">CONHECER
         </h6>
       </v-btn>
 
 
-      <v-btn class="mt-3 rounded-pill w-25 bg-secondary mt-sm-10 d-none d-sm-block d-lg-none" size="large"
+      <v-btn class="mt-3 rounded-pill w-25 bg-secondary mt-sm-10 d-none d-sm-block d-lg-none elevation-24" size="large"
         href="#inbound">
         <h6 class="text-primary font-weight-bold d-md-none" style="font-size: 80%; line-height: 45px;">CONHECER</h6>
 
@@ -50,7 +52,7 @@
         </h6>
       </v-btn>
 
-      <v-btn class="mt-3 rounded-pill w-50 bg-secondary mt-sm-10 w-sm-25 d-sm-none" href="#inbound">
+      <v-btn class="mt-3 rounded-pill w-50 bg-secondary mt-sm-10 w-sm-25 d-sm-none elevation-24" href="#inbound">
         <h6 class="text-primary font-weight-bold d-md-none" style="font-size: 80%;">CONHECER</h6>
 
         <h6 class="text-primary font-weight-bold d-none d-md-block" style="font-size: 105%;">CONHECER</h6>

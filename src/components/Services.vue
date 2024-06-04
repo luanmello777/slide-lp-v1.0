@@ -38,7 +38,7 @@
                             <template v-slot:default="{ isActive }">
                                 <v-card class="bg-primary rounded-xl">
                                     <v-card-text>
-                                        <h1 class="text-white font-weight-bold">MARKETING</h1>
+                                        <h1 class="font text-white font-weight-bold">MARKETING</h1>
                                         <p class="text-secondary">Combinamos produção de conteúdo e tráfego pago para
                                             atrair e converter leads de maneira eficaz. Criamos conteúdo de alta
                                             qualidade, como posts, vídeos e landing pages que abordam os interesses e
@@ -73,7 +73,7 @@
 
             <v-col cols="6">
                 <div>
-                    <v-img src="/marketing.png" type="image/webp" />
+                    <v-img src="/marketing.png" type="image/webp" loading="lazy" />
                 </div>
             </v-col>
         </v-row>
@@ -82,11 +82,11 @@
         <v-row class="w-100 pt-16 mt-10 mt-sm-16">
             <v-col cols="6">
                 <div>
-                    <v-img src="/social.png" type="image/webp" />
+                    <v-img src="/social.png" type="image/webp" loading="lazy" />
                 </div>
             </v-col>
 
-            <v-col class="pt-lg-16" cols="6">
+            <v-col class="pt-lg-16" cols="6" id="social">
                 <div align="left" style="line-height: normal;">
                     <h5 class="font font-weight-bold text-quartiary pt-5 pt-sm-9 pt-md-16 pt-lg-16 mt-lg-8 text-sm-h5 text-md-h4 text-lg-h4"
                         style="line-height: normal;">PRODUÇÃO
@@ -119,7 +119,7 @@
                         <template v-slot:default="{ isActive }">
                             <v-card class="bg-primary rounded-xl">
                                 <v-card-text>
-                                    <h1 class="text-white font-weight-bold">SOCIAL MEDIA</h1>
+                                    <h1 class="font text-white font-weight-bold">SOCIAL MEDIA</h1>
                                     <p class="text-quartiary">Criamos posts, vídeos, e stories que abordam
                                         os interesses e problemas do público-alvo nas redes sociais como Facebook,
                                         Instagram, LinkedIn e Twitter. Esse conteúdo é otimizado para gerar engajamento
@@ -155,7 +155,7 @@
 
 
         <v-row class="w-100 pt-16 mt-10 mt-sm-16 ml-lg-10">
-            <v-col class="pt-lg-16" cols="6">
+            <v-col class="pt-lg-16" cols="6" id="trafego">
                 <div align="left" style="line-height: normal;">
                     <h5 class="font font-weight-bold text-secondary pt-5 pt-sm-9 pt-md-16 pt-lg-16 mt-lg-16 text-sm-h5 text-md-h4 text-lg-h4"
                         style="line-height: normal;">GESTÃO</h5>
@@ -188,7 +188,7 @@
                         <template v-slot:default="{ isActive }">
                             <v-card class="bg-primary rounded-xl">
                                 <v-card-text>
-                                    <h1 class="text-white font-weight-bold">TRÁFEGO PAGO</h1>
+                                    <h1 class="font text-white font-weight-bold">TRÁFEGO PAGO</h1>
                                     <p class="text-secondary">A gestão de tráfego
                                         envolve
                                         a análise profunda de dados, a segmentação precisa do público-alvo e a
@@ -223,7 +223,7 @@
 
             <v-col cols="6">
                 <div>
-                    <v-img src="/trafego.png" type="image/webp" />
+                    <v-img src="/trafego.png" type="image/webp" loading="lazy" />
                 </div>
             </v-col>
         </v-row>
@@ -232,11 +232,11 @@
         <v-row class="w-100 pt-16 mt-10 mt-sm-16">
             <v-col cols="6">
                 <div>
-                    <v-img src="/page.png" type="image/webp" />
+                    <v-img src="/page.png" type="image/webp" loading="lazy" />
                 </div>
             </v-col>
 
-            <v-col class="pt-lg-16" cols="6">
+            <v-col class="pt-lg-16" cols="6" id="landing">
                 <div align="left" style="line-height: normal;">
                     <h5 class="font font-weight-bold text-quartiary pt-5 pt-sm-9 pt-md-16 pt-lg-16 mt-lg-8 text-sm-h5 text-md-h4 text-lg-h4"
                         style="line-height: normal;">CRIAÇÃO
@@ -272,7 +272,7 @@
                         <template v-slot:default="{ isActive }">
                             <v-card class="bg-primary rounded-xl">
                                 <v-card-text>
-                                    <h1 class="text-white font-weight-bold">LANDING PAGE</h1>
+                                    <h1 class="font text-white font-weight-bold">LANDING PAGE</h1>
                                     <p class="text-quartiary">Desenvolvemos landing pages otimizadas com um design
                                         atraente (responsivo), tecnologias funcionais,
                                         chamadas para ação claras e formulários simples. Promovemos as landing pages
@@ -370,7 +370,7 @@
 
             <v-col cols="12" sm="6">
                 <div class="mt-16">
-                    <v-img src="/iphone.png" type="image/webp" :class="smAndDown ? '' : 'w-75'" />
+                    <v-img src="/iphone.png" loading="lazy" type="image/webp" :class="smAndDown ? '' : 'w-75'" />
                 </div>
 
                 <div class="d-flex justify-space-evenly mt-10">
@@ -421,6 +421,18 @@
 }
 
 #inbound {
+    scroll-margin-top: 80px;
+}
+
+#social {
+    scroll-margin-top: 80px;
+}
+
+#trafego {
+    scroll-margin-top: 80px;
+}
+
+#landing {
     scroll-margin-top: 80px;
 }
 </style>
